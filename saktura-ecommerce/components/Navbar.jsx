@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
 
 function Navbar() {
   return (
-    <div>Navbar</div>
-  )
+    <>
+      <img></img>
+      <a>Wszystkie produkty</a>
+      <a>Rośliny</a>
+      <a>Świece</a>
+      <icon></icon>
+      <icon></icon>
+    </>
+  );
 }
 
-export default Navbar
+export default Navbar;
