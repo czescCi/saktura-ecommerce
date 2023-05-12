@@ -6,5 +6,3 @@ export { default as HeroBanner } from './HeroBanner';
 export { default as Navbar } from './Navbar';
 export { default as Product } from './Product';
 export { default as Contact } from './Contact';
-export { default as Regulamin } from './Regulamin';
-export { default as PolitykaPrywatnosci } from './PolitykaPrywatnosci';
