@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
-import { AiOutlineShopping } from "react-icons/ai";
+import { AiOutlineShopping, AiOutlineUser } from "react-icons/ai";
 
 function Navbar() {
   const [isActive, setActive] = useState(false);
@@ -13,6 +13,9 @@ function Navbar() {
   return (
     <>
       <nav>
+        <a href="#">
+          <img className="logo-desktop" src={logo.src}></img>
+        </a>
         <div className={isActive ? "active" : "navigation"}>
           <a href="#">Home</a>
           <a href="#">About</a>
@@ -28,9 +31,24 @@ function Navbar() {
             </button>
           </a>
 
-            <a href="#">
-              <img className="logo" src={logo.src}></img>
-            </a>
+          <a href="#">
+            <img className="logo-nav" src={logo.src}></img>
+          </a>
+          <div className="icons">
+            <button type="button" className="user-icon" onClick="">
+              <AiOutlineUser />
+            </button>
+
+            <button type="button" className="cart-icon" onClick="">
+              <AiOutlineShopping />
+              <span className="cart-item-qty">1</span>
+            </button>
+          </div>
+        </div>
+        <div className="icons-desktop">
+          <button type="button" className="user-icon" onClick="">
+            <AiOutlineUser />
+          </button>
 
           <button type="button" className="cart-icon" onClick="">
             <AiOutlineShopping />

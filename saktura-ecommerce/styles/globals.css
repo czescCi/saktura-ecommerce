@@ -41,12 +41,12 @@ nav a {
 
 nav button {
   background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
   height: 36px;
   width: 36px;
 }
@@ -58,8 +58,28 @@ nav button {
   width: 100%;
 }
 
-.logo {
+.logo-nav {
   height: 36px;
+  display: flex;
+  position: absolute;
+  top: 30px;
+}
+
+.logo-footer {
+  height: 36px;
+  display: flex;
+}
+
+.logo-desktop {
+  display: none;
+}
+
+.icons {
+  display: flex;
+}
+
+.icons-desktop {
+  display: none;
 }
 
 .navigation {
@@ -77,10 +97,11 @@ nav button {
   height: 100%;
   z-index: 1;
   background-color: #fff;
+  padding: 10px 30px;
 }
 
 .active a {
-  padding: 20px;
+  padding: 20px 0;
   color: black;
   font-size: 20px;
 }
@@ -104,13 +125,26 @@ nav button {
 }
 
 @media only screen and (min-width: 991px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+
   .navigation {
     display: flex;
-    justify-content: flex-end;
   }
 
   .navigation a {
     padding: 10px;
+  }
+
+  .logo-desktop {
+    height: 35px;
+    display: flex;
+  }
+
+  .icons-desktop {
+    display: flex;
   }
 
   .toogle-box {
@@ -121,31 +155,33 @@ nav button {
     display: flex;
     margin: 30px 0;
   }
-  }
+}
 
-  footer {
-    background-color: #5f5f5f;
-    display: flex;
-    flex-direction: column;
-  }
+footer {
+  background-color: #5f5f5f;
+  display: flex;
+  flex-direction: column;
+}
 
-  .footer-up .facebook, .instagram {
-    height: 32px;
-    width: 32px;
-  }
+.footer-up .facebook,
+.instagram {
+  height: 32px;
+  width: 32px;
+}
 
-  .footer-down {
-    display: flex;
-    justify-content: flex-end;
-  }
+.footer-down {
+  display: flex;
+  justify-content: flex-end;
+}
 
-  .footer-down p, a {
-    padding: 0 15px;
-  }
+.footer-down p,
+a {
+  padding: 0 15px;
+}
 
-  hr {
-    display: none;
-  }
+hr {
+  display: none;
+}
 
 .products-container {
   display: flex;

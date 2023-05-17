@@ -8,7 +8,7 @@ function Footer() {
     <>
       <footer>
         <div className="footer-up">
-          <img className="logo" src={logo.src}></img>
+          <img className="logo-footer" src={logo.src}></img>
           <AiFillFacebook className="facebook" />
           <AiFillInstagram className="instagram" />
         </div>
