@@ -12,7 +12,7 @@ function Navbar() {
 
   return (
     <>
-      <nav>
+      <nav className={isActive ? "asia" : "artur"}>
         <a href="#">
           <img className="logo-desktop" src={logo.src}></img>
         </a>

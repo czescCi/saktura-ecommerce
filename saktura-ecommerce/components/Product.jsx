@@ -5,9 +5,9 @@ import { useEffect } from "react";
 import { urlFor } from "../lib/client";
 
 function Product({ product: { image, name, slug, price } }) {
-  useEffect(() => {
-    console.log("value of slug:", slug);
-  }, [slug]);
+  // useEffect(() => {
+  //   console.log("value of slug:", slug);
+  // }, [slug]);
 
   if (!slug) return null;
 
