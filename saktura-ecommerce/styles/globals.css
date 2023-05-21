@@ -80,11 +80,6 @@ body:has(.asia) {
   top: 20px;
 }
 
-.logo-footer {
-  height: 36px;
-  display: flex;
-}
-
 .logo-desktop {
   display: none;
 }
@@ -111,7 +106,6 @@ body:has(.asia) {
   width: 100%;
   height: 100%;
   z-index: 1;
-  padding: 10px 30px;
 }
 
 .active a {
@@ -141,6 +135,49 @@ body:has(.asia) {
   display: none;
 }
 
+.contact-container {
+  display: none;
+}
+
+footer {
+  display: none;
+}
+
+hr {
+  display: none;
+}
+
+.products-container {
+  display: none;
+}
+
+.products-heading {
+  display: none;
+}
+
+.hero-banner-container {
+  height: calc(100vh - 80px);
+  width: 100%;
+  background-color: var(--color-lg-grey);
+}
+
+.hero-banner-container button {
+  display: none;
+}
+
+.hero-banner-container h3 {
+  display: none;
+}
+.hero-banner-container h1 {
+  display: none;
+}
+.hero-banner-image {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  width: 120px;
+}
+
 @media only screen and (min-width: 991px) {
   nav {
     display: flex;
@@ -154,7 +191,7 @@ body:has(.asia) {
   }
 
   .navigation a {
-    padding: 10px;
+    padding: 10px 40px 10px 0;
   }
 
   .logo-desktop {
@@ -174,109 +211,151 @@ body:has(.asia) {
     display: flex;
     margin: 30px 0;
   }
-}
 
-footer {
-  background-color: var(--color-grey);
-  display: flex;
-  flex-direction: column;
-}
+  .hero-banner-container {
+    padding: 100px 40px;
+    margin-top: 5px;
+    background-color: #dcdcdc;
+    border-radius: 15px;
+    position: relative;
+    height: 500px;
+    line-height: 0.9;
+    width: 100%;
+  }
 
-.footer-up .facebook,
-.instagram {
-  height: 32px;
-  width: 32px;
-}
+  .hero-banner-container button {
+    border-radius: 15px;
+    padding: 10px 16px;
+    background-color: #f02d34;
+    color: white;
+    border: none;
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+  }
 
-.footer-down {
-  display: flex;
-  justify-content: flex-end;
-}
+  .hero-banner-container h3 {
+    display: block;
+    font-size: 4rem;
+    margin-top: 4px;
+  }
+  .hero-banner-container h1 {
+    display: block;
+    color: white;
+    font-size: 10em;
+    margin-left: -20px;
+    text-transform: uppercase;
+  }
+  .hero-banner-image {
+    position: absolute;
+    top: 0;
+    right: 20%;
+    width: 120px;
+  }
 
-.footer-down p,
-a {
-  padding: 0 15px;
-}
+  .desc {
+    position: absolute;
+    right: 10%;
+    bottom: 5%;
+    width: 300px;
+    line-height: 1.3;
+    display: flex;
+    flex-direction: column;
+    color: #324d67;
+  }
+  .desc p {
+    color: #5f5f5f;
+    font-weight: 100;
+    text-align: end;
+  }
+  .desc h5 {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    /* color: black; */
+    align-self: flex-end;
+  }
+  .products-heading {
+    text-align: center;
+    margin: 40px 0px;
+    color: #324d67;
+  }
+  .products-heading h2 {
+    font-size: 40px;
+    font-weight: 800;
+  }
+  .products-heading p {
+    font-size: 16px;
+    font-weight: 200;
+  }
 
-hr {
-  display: none;
-}
+  .contact-container {
+    display: block;
+  }
 
-.products-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-  width: 100%;
-}
+  footer {
+    background-color: var(--color-grey);
+    display: flex;
+    flex-direction: column;
+  }
 
-.product-card {
-  cursor: pointer;
-  transform: scale(1, 1);
-  transition: transform 0.5s ease;
-  color: #324d67;
-}
-.product-card:hover {
-  transform: scale(1.1, 1.1);
-}
-.product-image {
-  border-radius: 15px;
-  background-color: #ebebeb;
-  transform: scale(1, 1);
-  transition: transform 0.5s ease;
-  height: 12rem;
-  width: 11rem;
-}
+  .footer-up .facebook,
+  .instagram {
+    height: 32px;
+    width: 32px;
+  }
 
-.product-name {
-  font-weight: 500;
-}
-.product-price {
-  font-weight: 800;
-  margin-top: 6px;
-  color: black;
-}
+  .footer-down {
+    display: flex;
+    justify-content: flex-end;
+  }
 
-.hero-banner-container {
-  padding: 100px 40px;
-  margin-top: 5px;
-  background-color: #dcdcdc;
-  border-radius: 15px;
-  position: relative;
-  height: 500px;
-  line-height: 0.9;
-  width: 100%;
-}
+  .footer-down p,
+  a {
+    padding: 0 15px;
+  }
 
-.hero-banner-container button {
-  border-radius: 15px;
-  padding: 10px 16px;
-  background-color: #f02d34;
-  color: white;
-  border: none;
-  margin-top: 40px;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-  z-index: 10000 !important;
-}
+  .logo-footer {
+    height: 36px;
+    display: flex;
+  }
 
-.hero-banner-container h3 {
-  font-size: 4rem;
-  margin-top: 4px;
-}
-.hero-banner-container h1 {
-  color: white;
-  font-size: 10em;
-  margin-left: -20px;
-  text-transform: uppercase;
-}
-.hero-banner-image {
-  position: absolute;
-  top: 0%;
-  right: 20%;
-  width: 120px;
+  .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .product-card {
+    cursor: pointer;
+    transform: scale(1, 1);
+    transition: transform 0.5s ease;
+    color: #324d67;
+  }
+  .product-card:hover {
+    transform: scale(1.1, 1.1);
+  }
+  .product-image {
+    border-radius: 15px;
+    background-color: #ebebeb;
+    transform: scale(1, 1);
+    transition: transform 0.5s ease;
+    height: 12rem;
+    width: 11rem;
+  }
+
+  .product-name {
+    font-weight: 500;
+  }
+  .product-price {
+    font-weight: 800;
+    margin-top: 6px;
+    color: black;
+  }
 }
 
 @media (min-width: 768px) {
@@ -289,40 +368,4 @@ hr {
   .hero-banner-image {
     width: 380px;
   }
-}
-
-.desc {
-  position: absolute;
-  right: 10%;
-  bottom: 5%;
-  width: 300px;
-  line-height: 1.3;
-  display: flex;
-  flex-direction: column;
-  color: #324d67;
-}
-.desc p {
-  color: #5f5f5f;
-  font-weight: 100;
-  text-align: end;
-}
-.desc h5 {
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 16px;
-  /* color: black; */
-  align-self: flex-end;
-}
-.products-heading {
-  text-align: center;
-  margin: 40px 0px;
-  color: #324d67;
-}
-.products-heading h2 {
-  font-size: 40px;
-  font-weight: 800;
-}
-.products-heading p {
-  font-size: 16px;
-  font-weight: 200;
 }
