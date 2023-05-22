@@ -171,6 +171,12 @@ hr {
 .hero-banner-container h1 {
   display: none;
 }
+
+.images-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .hero-banner-image {
   position: absolute;
   top: 20%;
@@ -247,6 +253,12 @@ hr {
     margin-left: -20px;
     text-transform: uppercase;
   }
+
+  .images-container {
+    display: flex;
+    flex-direction: row;
+  }
+
   .hero-banner-image {
     position: absolute;
     top: 0;
