@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+
 html,
 body,
 * {
@@ -11,6 +13,7 @@ body,
   --color-white: rgb(255, 255, 255);
   --color-black: rgb(0, 0, 0);
   --color-grey: rgba(119, 119, 119, 1);
+  --color-dark-grey: rgba(72, 72, 72, 1);
   --color-lg-grey: rgba(236, 236, 236, 1);
   --color-coral: rgba(255, 111, 97, 1);
   --color-yellow: rgba(255, 176, 83, 1);
@@ -23,7 +26,6 @@ a {
 }
 
 .main-container {
-  max-width: 1400px;
   margin: auto;
   width: 100%;
 }
@@ -157,7 +159,7 @@ hr {
 
 .hero-banner-container {
   height: calc(100vh - 80px);
-  width: 100%;
+  width: 100vw;
   background-color: var(--color-lg-grey);
 }
 
@@ -172,16 +174,33 @@ hr {
   display: none;
 }
 
-.images-container {
-  display: flex;
-  flex-direction: row;
+.hero-banner-image {
+  width: 100vw;
+  height: calc(50vh - 45px);
+  object-fit: cover;
+  overflow: hidden;
+  opacity: 70%;
 }
 
-.hero-banner-image {
+.image-text-container {
+  position: relative;
+  text-align: center;
+}
+
+.hero-banner-img-text {
   position: absolute;
-  top: 20%;
-  right: 20%;
-  width: 120px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cart-item-qty {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 100;
 }
 
 @media only screen and (min-width: 991px) {
@@ -198,6 +217,7 @@ hr {
 
   .navigation a {
     padding: 10px 40px 10px 0;
+    font-weight: 500;
   }
 
   .logo-desktop {
@@ -207,6 +227,7 @@ hr {
 
   .icons-desktop {
     display: flex;
+    align-items: center;
   }
 
   .toogle-box {
@@ -219,51 +240,25 @@ hr {
   }
 
   .hero-banner-container {
-    padding: 100px 40px;
-    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     background-color: #dcdcdc;
-    border-radius: 15px;
     position: relative;
     height: 500px;
-    line-height: 0.9;
     width: 100%;
   }
 
-  .hero-banner-container button {
-    border-radius: 15px;
-    padding: 10px 16px;
-    background-color: #f02d34;
-    color: white;
-    border: none;
-    margin-top: 40px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-  }
-
-  .hero-banner-container h3 {
-    display: block;
-    font-size: 4rem;
-    margin-top: 4px;
-  }
-  .hero-banner-container h1 {
-    display: block;
-    color: white;
-    font-size: 10em;
-    margin-left: -20px;
-    text-transform: uppercase;
-  }
-
-  .images-container {
-    display: flex;
-    flex-direction: row;
-  }
-
   .hero-banner-image {
-    position: absolute;
-    top: 0;
-    right: 20%;
-    width: 120px;
+    width: 400px;
+    height: 400px;
+  }
+
+  .image-text-container {
+    position: relative;
+    text-align: center;
+    padding: 0 50px;
   }
 
   .desc {
@@ -289,9 +284,9 @@ hr {
     align-self: flex-end;
   }
   .products-heading {
-    text-align: center;
-    margin: 40px 0px;
-    color: #324d67;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
   }
   .products-heading h2 {
     font-size: 40px;
@@ -306,10 +301,44 @@ hr {
     display: block;
   }
 
+  .contact {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-data {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+  }
+
+  .email,
+  .phone,
+  .account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    column-gap: 20px;
+  }
+
+  .contact-icons {
+    height: 32px;
+    width: 32px;
+    padding-bottom: 5px;
+  }
+
   footer {
     background-color: var(--color-grey);
     display: flex;
     flex-direction: column;
+  }
+
+  .dark-line {
+    background-color: var(--color-dark-grey);
+    height: 1px;
+    border: 0;
   }
 
   .footer-up .facebook,
@@ -337,20 +366,23 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
     width: 100%;
   }
 
   .product-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     cursor: pointer;
     transform: scale(1, 1);
     transition: transform 0.5s ease;
-    color: #324d67;
+    padding: 0 30px;
   }
+
   .product-card:hover {
     transform: scale(1.1, 1.1);
   }
+
   .product-image {
     border-radius: 15px;
     background-color: #ebebeb;
@@ -367,17 +399,5 @@ hr {
     font-weight: 800;
     margin-top: 6px;
     color: black;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero-banner-image {
-    width: 260px;
-  }
-}
-
-@media (min-width: 1023px) {
-  .hero-banner-image {
-    width: 380px;
   }
 }

@@ -4,6 +4,10 @@ import { client } from "../lib/client";
 import { Product, FooterBanner, HeroBanner, Contact } from "../components";
 
 function Home({ products, bannerData }) {
+  console.log(products);
+  let productsFiltered = products
+    .filter((product) => product.slug != null)
+    .slice(0, 4);
   return (
     <>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
@@ -11,7 +15,7 @@ function Home({ products, bannerData }) {
         <h2>Poznaj nasze bestsellery</h2>
       </div>
       <div className="products-container">
-        {products?.map((product) => (
+        {productsFiltered?.map((product) => (
           <Product key={product._id} product={product} />
         ))}
       </div>

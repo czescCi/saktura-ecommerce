@@ -13,7 +13,7 @@ function Footer() {
           <AiFillInstagram className="instagram" />
         </div>
 
-        <hr></hr>
+        <hr className="dark-line"></hr>
 
         <div className="footer-down">
           <p>Regulamin</p>
