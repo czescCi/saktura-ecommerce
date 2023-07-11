@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import {
   HiOutlineMail,
@@ -9,25 +10,29 @@ function Contact() {
   return (
     <>
       <div className="contact-container">
-        <hr></hr>
+        <hr className="dark-line"></hr>
         <div className="contact">
-          <h1>Kontakt</h1>
+          <h2>Kontakt</h2>
         </div>
         <div className="contact-data">
           <div className="email">
-            <HiOutlineMail className="contact-icons" />
-            <h2>Email</h2>
-            <h3>kontakt@firma.com</h3>
+            <a href="mailto:kontakt@firma.com?subject=Hello">
+              <HiOutlineMail className="contact-icons" />
+            </a>
+            <p>Email</p>
+            <a href="mailto:kontakt@firma.com?subject=Hello">
+              kontakt@firma.com
+            </a>
           </div>
           <div className="phone">
             <HiOutlinePhone className="contact-icons" />
-            <h2>Telefon</h2>
-            <h3>+48 555 55 55</h3>
+            <p>Telefon</p>
+            <p>+48 555 55 55</p>
           </div>
           <div className="account">
             <HiOutlineCurrencyEuro className="contact-icons" />
-            <h2>Konto</h2>
-            <h3>20 1111 2222 5555 5555 5555 4444</h3>
+            <p>Konto</p>
+            <p>20 1111 2222 5555 5555 5555 4444</p>
           </div>
         </div>
       </div>

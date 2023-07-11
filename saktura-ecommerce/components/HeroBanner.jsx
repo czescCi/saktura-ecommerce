@@ -7,20 +7,28 @@ function HeroBanner({ heroBanner }) {
   return (
     <div className="hero-banner-container">
       <div className="image-text-container">
-        <img
-          src={urlFor(heroBanner.image && heroBanner.image[0])}
-          alt="candle"
-          className="hero-banner-image"
-        />
-        <a className="hero-banner-img-text">Świece</a>
+        <Link href="">
+          <img
+            src={urlFor(heroBanner.image && heroBanner.image[0])}
+            alt="candle"
+            className="hero-banner-image"
+          />
+        </Link>
+        <Link className="hero-banner-img-text" href="">
+          Świece
+        </Link>
       </div>
       <div className="image-text-container">
-        <img
-          src={urlFor(heroBanner.image && heroBanner.image[1])}
-          alt="plant"
-          className="hero-banner-image"
-        />
-        <a className="hero-banner-img-text">Rośliny</a>
+        <Link href="">
+          <img
+            src={urlFor(heroBanner.image && heroBanner.image[1])}
+            alt="plant"
+            className="hero-banner-image"
+          />
+        </Link>
+        <Link className="hero-banner-img-text" href="">
+          Rośliny
+        </Link>
       </div>
       {/* <div>
         <Link href={`/product/${heroBanner.product}`}>

@@ -35,23 +35,23 @@ function Navbar() {
             <img className="logo-nav" src={logo.src}></img>
           </a>
           <div className="icons">
-            <button type="button" className="user-icon">
-              <AiOutlineUser />
+            <button type="button">
+              <AiOutlineUser className="user-icon"/>
             </button>
 
-            <button type="button" className="cart-icon">
-              <AiOutlineShopping />
+            <button type="button">
+              <AiOutlineShopping className="cart-icon"/>
               <span className="cart-item-qty">1</span>
             </button>
           </div>
         </div>
         <div className="icons-desktop">
-          <button type="button" className="user-icon">
-            <AiOutlineUser />
+          <button type="button">
+            <AiOutlineUser className="user-icon"/>
           </button>
 
-          <button type="button" className="cart-icon" >
-            <AiOutlineShopping />
+          <button type="button">
+            <AiOutlineShopping className="cart-icon"/>
             <span className="cart-item-qty">1</span>
           </button>
         </div>
