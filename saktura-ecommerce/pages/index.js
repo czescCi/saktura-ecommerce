@@ -4,7 +4,6 @@ import { client } from "../lib/client";
 import { Product, FooterBanner, HeroBanner, Contact } from "../components";
 
 function Home({ products, bannerData }) {
-  console.log(products);
   let productsFiltered = products
     .filter((product) => product.slug != null)
     .slice(0, 4);

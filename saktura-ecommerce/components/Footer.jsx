@@ -9,7 +9,7 @@ function Footer() {
     <>
       <footer>
         <div className="footer-up">
-          <img className="logo-footer" src={logoWhite.src}></img>
+          {/* <img className="logo-footer" src={logoWhite.src}></img> */}
           <div className="icons-footer">
             <a className="social-links" href="">
               <AiFillFacebook className="facebook" />
