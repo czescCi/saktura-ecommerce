@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineShopping, AiOutlineUser } from "react-icons/ai";
+import { Cart } from "./";
+import { useStateContext } from "/context/StateContext";
 
 function Navbar() {
   const [isActive, setActive] = useState(false);
-
+  const { showCart, setShowCart, totalQuantities } = useStateContext();
   const handleToogle = () => {
     setActive(!isActive);
   };
@@ -36,24 +38,25 @@ function Navbar() {
           </a>
           <div className="icons">
             <button type="button">
-              <AiOutlineUser className="user-icon"/>
+              <AiOutlineUser className="user-icon" />
             </button>
 
-            <button type="button">
-              <AiOutlineShopping className="cart-icon"/>
-              <span className="cart-item-qty">1</span>
+            <button type="button" onClick={() => setShowCart(true)}>
+              <AiOutlineShopping className="cart-icon" />
+              <span className="cart-item-qty">{totalQuantities}</span>
             </button>
           </div>
         </div>
         <div className="icons-desktop">
           <button type="button">
-            <AiOutlineUser className="user-icon"/>
+            <AiOutlineUser className="user-icon" />
           </button>
 
-          <button type="button">
-            <AiOutlineShopping className="cart-icon"/>
-            <span className="cart-item-qty">1</span>
+          <button type="button" onClick={() => setShowCart(true)}>
+            <AiOutlineShopping className="cart-icon" />
+            <span className="cart-item-qty">{totalQuantities}</span>
           </button>
+          {showCart && <Cart />}
         </div>
       </nav>
     </>
