@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from 'next/link';
 import logo from "../assets/logo.png";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineShopping, AiOutlineUser } from "react-icons/ai";
@@ -15,9 +16,9 @@ function Navbar() {
   return (
     <>
       <nav className={isActive ? "asia" : "artur"}>
-        <a href="#">
+        <Link href="/">
           <img className="logo-desktop" src={logo.src}></img>
-        </a>
+        </Link>
         <div className={isActive ? "active" : "navigation"}>
           <a href="#">Home</a>
           <a href="#">About</a>
@@ -33,9 +34,9 @@ function Navbar() {
             </button>
           </a>
 
-          <a href="#">
+          <Link href="/">
             <img className="logo-nav" src={logo.src}></img>
-          </a>
+          </Link>
           <div className="icons">
             <button type="button">
               <AiOutlineUser className="user-icon" />
