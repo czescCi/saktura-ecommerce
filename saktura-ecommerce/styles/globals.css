@@ -354,11 +354,11 @@ hr {
   cursor: pointer;
 }
 .quantity-desc .minus {
-  border-right: 1px solid gray;
   color: #f02d34;
 }
 .quantity-desc .num {
   border-right: 1px solid gray;
+  border-left: 1px solid gray;
   font-size: 20px;
 }
 .quantity-desc .plus {
@@ -609,8 +609,7 @@ hr {
   .product-detail-container {
     display: flex;
     gap: 40px;
-    margin: 40px;
-    margin-top: 60px;
+    margin: 40px 40px 0 40px;
     color: #324d67;
     flex-wrap: wrap;
   }
@@ -738,7 +737,6 @@ hr {
     cursor: pointer;
   }
   .quantity-desc .minus {
-    border-right: 1px solid gray;
     color: #f02d34;
   }
   .quantity-desc .num {
@@ -751,7 +749,7 @@ hr {
 
   .maylike-products-wrapper {
     display: block;
-    margin-top: 120px;
+    margin-top: 60px;
   }
   .maylike-products-wrapper h2 {
     text-align: center;
@@ -764,7 +762,7 @@ hr {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 20px;
+    margin: 20px 0;
     overflow: hidden;
   }
 
@@ -789,8 +787,9 @@ hr {
 
   .cart-heading {
     display: flex;
+    width: 100%;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     cursor: pointer;
     gap: 2px;
@@ -874,6 +873,7 @@ hr {
     cursor: pointer;
     transform: scale(1, 1);
     transition: transform 0.5s ease;
+    line-height: 0;
   }
   .btn:hover {
     transform: scale(1.1, 1.1);
@@ -907,11 +907,11 @@ hr {
     cursor: pointer;
   }
   .quantity-desc .minus {
-    border-right: 1px solid gray;
     color: #f02d34;
   }
   .quantity-desc .num {
     border-right: 1px solid gray;
+    border-left: 1px solid gray;
     font-size: 20px;
   }
   .quantity-desc .plus {

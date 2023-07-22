@@ -1,10 +1,11 @@
 import React from "react";
-import { Product } from "../../components";
-import { client, urlFor } from "../../lib/client";
+import { Product } from ".";
+import { client, urlFor } from "../lib/client";
+import Link from "next/link";
 
 function AllProducts({ products }) {
   let productsFiltered = products.filter((product) => product.slug != null);
-
+  
   return (
     <div className="products-container">
       {productsFiltered?.map((product) => (

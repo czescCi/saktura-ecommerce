@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Link from 'next/link';
+import Link from "next/link";
 import logo from "../assets/logo.png";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineShopping, AiOutlineUser } from "react-icons/ai";
@@ -46,6 +46,7 @@ function Navbar() {
               <AiOutlineShopping className="cart-icon" />
               <span className="cart-item-qty">{totalQuantities}</span>
             </button>
+            {showCart && <Cart />}
           </div>
         </div>
         <div className="icons-desktop">

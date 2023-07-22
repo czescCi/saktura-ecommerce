@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import Layout from "./Layout";
+import AllProducts from "./AllProducts";
 
 import { urlFor } from "../lib/client";
 
@@ -7,7 +9,9 @@ function HeroBanner({ heroBanner }) {
   return (
     <div className="hero-banner-container">
       <div className="image-text-container">
-        <Link href="">
+        <Link
+          href=""
+        >
           <img
             src={urlFor(heroBanner.image && heroBanner.image[0])}
             alt="candle"
