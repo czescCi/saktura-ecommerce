@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 
 import { useStateContext } from '../context/StateContext';
 import { urlFor } from '../lib/client';
+import Order from './Order';
 
 const Cart = () => {
   const cartRef = useRef();
@@ -78,7 +79,7 @@ const Cart = () => {
             </div>
             <div className="btn-container">
               <button type="button" className="btn" onClick="">
-                Zapłać z Stripe
+                Zamów
               </button>
             </div>
           </div>
